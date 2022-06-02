@@ -9,3 +9,11 @@ it("renders with expected values", () => {
     screen.getByRole("cell", { name: /engineering/i })
   ).toBeInTheDocument();
 });
+
+it("has the correct class", () => {
+  render(<Table employees={fakeEmployees} />);
+  expect(screen.getByRole("table")).toHaveAttribute(
+    "class",
+    "table table-striped"
+  );
+});
