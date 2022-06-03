@@ -8,6 +8,7 @@ it("renders with expected values", () => {
   expect(
     screen.getByRole("cell", { name: /engineering/i })
   ).toBeInTheDocument();
+  // screen.debug()
 });
 
 it("has the correct class", () => {
