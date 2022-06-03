@@ -1,5 +1,6 @@
 import React from 'react'
 import './App.css'
+import DrinkSearch from './DrinkSearch'
 import EmployeeEmail from './EmployeeEmail'
 import Jumbotron from './Jumbotron'
 import Table from './Table'
@@ -30,6 +31,7 @@ function App() {
   return (
     <div className="App">
       <Jumbotron />
+      <DrinkSearch />
       <Table employees={employees} />
       <EmployeeEmail />
     </div>
