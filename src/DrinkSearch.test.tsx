@@ -42,3 +42,22 @@ test('renders no drink results', async () => {
     await screen.findByRole('heading', { name: /no drinks found/i })
   ).toBeInTheDocument()
 })
+
+test('renders service unavailable', async () => {
+  mockServer.use(
+    rest.get(
+      'https://www.thecocktaildb.com/api/json/v1/1/search.php',
+      (req, res, ctx) => {
+        return res(ctx.status(503))
+      }
+    )
+  )
+  render(<DrinkSearch />)
+  const searchInput = screen.getByRole('searchbox')
+
+  await user.type(searchInput, 'vodka{enter}')
+
+  expect(
+    await screen.findByRole('heading', { name: /service unavailable/i })
+  ).toBeInTheDocument()
+})
