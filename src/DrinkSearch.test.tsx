@@ -61,3 +61,12 @@ test('renders service unavailable', async () => {
     await screen.findByRole('heading', { name: /service unavailable/i })
   ).toBeInTheDocument()
 })
+
+test('prevents GET request when search input empty', async () => {
+  render(<DrinkSearch />)
+  const searchInput = screen.getByRole('searchbox')
+
+  await user.type(searchInput, '{enter}')
+
+  expect(screen.queryByRole('heading')).not.toBeInTheDocument()
+})
