@@ -10,11 +10,10 @@ export const handlers = [
         ctx.json({
           drinks: [
             {
-              idDrink: 1,
-              strDrinkThumb: '../images/logo.png',
-              strDrink: 'test drink',
-              strInstructions: 'test instructions',
-              strIngredient1: 'test ingredient'
+              idDrink: '11457',
+              strDrink: 'Gin Fizz',
+              strInstructions:
+                'Shake all ingredients with ice cubes, except soda water. Pour into glass. Top with soda water.'
             }
           ]
         })

@@ -67,6 +67,5 @@ test('prevents GET request when search input empty', async () => {
   const searchInput = screen.getByRole('searchbox')
 
   await user.type(searchInput, '{enter}')
-
   expect(screen.queryByRole('heading')).not.toBeInTheDocument()
 })

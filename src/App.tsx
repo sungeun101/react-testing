@@ -4,6 +4,7 @@ import DrinkSearch from './DrinkSearch'
 import EmployeeEmail from './EmployeeEmail'
 import Jumbotron from './Jumbotron'
 import Table from './Table'
+import VoteBtn from './VoteBtn'
 
 export interface IEmployee {
   id: number
@@ -30,6 +31,11 @@ function App() {
 
   return (
     <div className="App">
+      {/* <VoteBtn
+        handleVote={stubHandleVote}
+        hasVoted={false}
+        stubText={stubText}
+      /> */}
       <Jumbotron />
       <DrinkSearch />
       <Table employees={employees} />

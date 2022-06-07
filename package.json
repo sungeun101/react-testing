@@ -43,5 +43,8 @@
   "devDependencies": {
     "msw": "^0.42.0",
     "prettier": "^2.6.2"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
