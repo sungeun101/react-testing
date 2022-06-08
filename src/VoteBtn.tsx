@@ -3,7 +3,7 @@ import React from 'react'
 export default function VoteBtn(props: {
   handleVote: React.MouseEventHandler<HTMLButtonElement> | undefined
   hasVoted: boolean | undefined
-  stubText: any
+  btnText: any
 }) {
   return (
     // Write the minimum amount of code
@@ -11,7 +11,7 @@ export default function VoteBtn(props: {
 
     // Write the minimum amount of code to make the test pass
     <button onClick={props.handleVote} disabled={props.hasVoted}>
-      <span>{props.stubText}</span>
+      {props.btnText}
     </button>
   )
 }
