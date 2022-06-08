@@ -1,8 +1,9 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.css'
 import DrinkSearch from './DrinkSearch'
 import EmployeeEmail from './EmployeeEmail'
 import Jumbotron from './Jumbotron'
+import Register from './Register'
 import Table from './Table'
 import Vote from './Vote'
 
@@ -32,6 +33,7 @@ function App() {
   return (
     <div className="App">
       <Jumbotron />
+      <Register handleRegister={values => console.log(values)} />
       <Vote />
       <DrinkSearch />
       <Table employees={employees} />
